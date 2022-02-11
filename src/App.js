@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("code");
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
+  const [HasMore, setHasMore] = useState(true);
 
   const client_id = "EkGuQ1WHbbOSWDHyMwLudEk9SFwJNawuySVEYf0q0nY";
   const fetchUrl = `https://api.unsplash.com/search/photos?client_id=${client_id}&query=${query}&page=${page}`;
@@ -46,7 +46,7 @@ function App() {
       <InfiniteScroll
         dataLength={data.length}
         next={fetchImages}
-        hasMore={hasMore}
+        hasMore={HasMore}
         loader={<p>Searching...</p>}
         endMessage={
           <p style={{ textAlign: "center" }}>
